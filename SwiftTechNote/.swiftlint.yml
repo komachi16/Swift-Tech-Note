@@ -1,0 +1,55 @@
+# Swiftlintのルール集
+
+# 通常有効だけど無効にするルール
+disabled_rules:
+- trailing_whitespace # Xocdeの自動生成ファイルで警告が出るため
+- vertical_whitespace # Xocdeの自動生成ファイルで警告が出るため
+- trailing_newline # Xocdeの自動生成ファイルで警告が出るため
+- nesting # クロージャの使用ですぐに警告が出るため
+- todo # すぐに修正できない場合があり、pushの度にlintに引っかかってbotに書き込まれるのがノイズになるから
+- trailing_comma # 配列や辞書の末尾のカンマはつけても良い
+
+# 通常無効だけど有効にするルール
+opt_in_rules:
+- force_unwrapping # 強制アンラップの禁止
+- empty_string # 空文字の判定にはisEmptyを使うべき
+- empty_count # 上記同様、個数のチェックにはisEmptyを使うべき
+- empty_collection_literal # 個数のチェックにはisEmptyを使うべき
+- trailing_closure # 関数の最後の引数がclosureの場合、trailing closureを使用する
+- unowned_variable_capture # unowned selfの禁止
+- unused_import # 使用していないimportの禁止
+- first_where # filter+firstはfirst(where: )を使う方が好ましい
+- last_where # 上記同様、last(where: )を使う方が好ましいので
+- contains_over_first_not_nil # first != nil はcontainでチェックする
+- file_types_order # コードの整列
+- type_contents_order # コードの整列
+- let_var_whitespace # コードの整列
+- private_action # カプセル化を促進
+- private_outlet # UIコンポーネントへの不必要なアクセスを防ぐ
+- shorthand_optional_binding # 短縮系を使用してコードの簡潔化
+
+# 1行の文字列制限
+line_length:
+- 200   # warning
+- 300   # error
+
+# メソッドの行数制限
+function_body_length:
+- 100   # warning
+- 200   # error
+
+# 変数名が2文字以上なら許可
+identifier_name:
+  min_length:
+    error: 2
+  excluded: # 以下の単語は定形語のためルールの対象外とする。
+    - id
+    - URL
+    - x
+    - y
+    - vc
+    - on
+
+# SwiftLintの適用から外すディレクトリ
+excluded:
+#- R.generated.swift  （記載例）
