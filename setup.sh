@@ -19,23 +19,35 @@ if [ -d "./hooks" ]; then
             echo $(color_red "⛔️ Error: Failed to create .git/hooks directory.")
             exit 1
         }
-
-        # 'hooks' フォルダの内容を '.git/hooks' にコピー
-        cp -r ./hooks/* ./.git/hooks/ || {
-            echo $(color_red "⛔️ Error: Failed to copy hooks.")
-            exit 1
-        }
-
-        # コピーしたスクリプトに実行権限を与える
-        chmod -R +x ./.git/hooks/ || {
-            echo $(color_red "⛔️ Error: Failed to set executable permissions.")
-            exit 1
-        }
-
-        echo $(color_green "🟢 Success: Hooks have been successfully copied to .git/hooks.")
-    else
-        echo $(color_green "🔄 Notice: Hooks already exist in .git/hooks. No need to run this command again.")
+        echo $(color_green "🟢 Success: Created .git/hooks directory.")
     fi
+
+    # 'hooks' フォルダの内容を '.git/hooks' にコピー
+    for hook in ./hooks/*; do
+        # 各フックファイルをコピー
+        if [ ! -f ./.git/hooks/$(basename "$hook") ]; then
+            cp "$hook" ./.git/hooks/ || {
+                echo $(color_red "⛔️ Error: Failed to copy hook: $hook")
+                exit 1
+            }
+            # コピーしたスクリプトに実行権限を与える
+            chmod +x ./.git/hooks/$(basename "$hook") || {
+                echo $(color_red "⛔️ Error: Failed to set executable permissions for $(basename "$hook").")
+                exit 1
+            }
+            echo $(color_green "🟢 Success: Created hook $(basename "$hook") in .git/hooks.")
+        else
+            cp "$hook" ./.git/hooks/ || {
+                echo $(color_red "⛔️ Error: Failed to copy hook: $hook")
+                exit 1
+            }
+            chmod +x ./.git/hooks/$(basename "$hook") || {
+                echo $(color_red "⛔️ Error: Failed to set executable permissions for $(basename "$hook").")
+                exit 1
+            }
+            echo $(color_green "🔄 Updated hook $(basename "$hook") in .git/hooks.")
+        fi
+    done
 else
     echo $(color_red "⛔️ Error: 'hooks' directory does not exist.")
 fi
