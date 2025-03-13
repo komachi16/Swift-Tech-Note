@@ -1,4 +1,6 @@
 #!/bin/sh
+## このファイルを変更した後は、必ず以下のコマンドを実行して、/.git/hooks の内容を更新してください。
+## コマンド: % ./setup.sh
 
 # PATH を設定（swiftformat のパスを追加）
 export PATH="/opt/homebrew/bin:$PATH"
