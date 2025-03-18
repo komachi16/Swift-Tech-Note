@@ -97,10 +97,9 @@
 		6690D5262C92A50200A9ECF7 /* SwiftTechNote */ = {
 			isa = PBXGroup;
 			children = (
-				66C68F7D2D896F3700FEAAEC /* Colors.xcassets */,
+				66C68F7F2D89767100FEAAEC /* Resource */,
 				6690D5272C92A50200A9ECF7 /* SwiftTechNoteApp.swift */,
 				6690D5292C92A50200A9ECF7 /* ContentView.swift */,
-				6690D52B2C92A50400A9ECF7 /* Assets.xcassets */,
 				6690D52D2C92A50400A9ECF7 /* Preview Content */,
 				66C68F752D895E7800FEAAEC /* Info.plist */,
 			);
@@ -130,6 +129,15 @@
 				6690D5442C92A50400A9ECF7 /* SwiftTechNoteUITestsLaunchTests.swift */,
 			);
 			path = SwiftTechNoteUITests;
+			sourceTree = "<group>";
+		};
+		66C68F7F2D89767100FEAAEC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				66C68F7D2D896F3700FEAAEC /* Colors.xcassets */,
+				6690D52B2C92A50400A9ECF7 /* Assets.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
