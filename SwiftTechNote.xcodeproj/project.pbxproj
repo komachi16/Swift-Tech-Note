@@ -15,6 +15,9 @@
 		6690D5432C92A50400A9ECF7 /* SwiftTechNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690D5422C92A50400A9ECF7 /* SwiftTechNoteUITests.swift */; };
 		6690D5452C92A50400A9ECF7 /* SwiftTechNoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690D5442C92A50400A9ECF7 /* SwiftTechNoteUITestsLaunchTests.swift */; };
 		66C68F7E2D896F3700FEAAEC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C68F7D2D896F3700FEAAEC /* Colors.xcassets */; };
+		66E995BC2DA7686F00BF65DE /* TutorialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E995BB2DA7686F00BF65DE /* TutorialsView.swift */; };
+		66E995BF2DA7693F00BF65DE /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E995BE2DA7693F00BF65DE /* CircleImage.swift */; };
+		66E995C12DA76A3800BF65DE /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E995C02DA76A3800BF65DE /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		6690D5442C92A50400A9ECF7 /* SwiftTechNoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTechNoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		66C68F752D895E7800FEAAEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66C68F7D2D896F3700FEAAEC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		66E995BB2DA7686F00BF65DE /* TutorialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialsView.swift; sourceTree = "<group>"; };
+		66E995BE2DA7693F00BF65DE /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		66E995C02DA76A3800BF65DE /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,7 @@
 				66C68F7F2D89767100FEAAEC /* Resource */,
 				6690D5272C92A50200A9ECF7 /* SwiftTechNoteApp.swift */,
 				6690D5292C92A50200A9ECF7 /* ContentView.swift */,
+				66E995BD2DA7690C00BF65DE /* Tutorials */,
 				6690D52D2C92A50400A9ECF7 /* Preview Content */,
 				66C68F752D895E7800FEAAEC /* Info.plist */,
 			);
@@ -138,6 +145,16 @@
 				6690D52B2C92A50400A9ECF7 /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		66E995BD2DA7690C00BF65DE /* Tutorials */ = {
+			isa = PBXGroup;
+			children = (
+				66E995BB2DA7686F00BF65DE /* TutorialsView.swift */,
+				66E995BE2DA7693F00BF65DE /* CircleImage.swift */,
+				66E995C02DA76A3800BF65DE /* MapView.swift */,
+			);
+			path = Tutorials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6690D52A2C92A50200A9ECF7 /* ContentView.swift in Sources */,
+				66E995BF2DA7693F00BF65DE /* CircleImage.swift in Sources */,
+				66E995C12DA76A3800BF65DE /* MapView.swift in Sources */,
+				66E995BC2DA7686F00BF65DE /* TutorialsView.swift in Sources */,
 				6690D5282C92A50200A9ECF7 /* SwiftTechNoteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
