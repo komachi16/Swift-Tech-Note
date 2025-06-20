@@ -17,7 +17,6 @@ opt_in_rules:
 - empty_collection_literal # 個数のチェックにはisEmptyを使うべき
 - trailing_closure # 関数の最後の引数がclosureの場合、trailing closureを使用する
 - unowned_variable_capture # unowned selfの禁止
-- unused_import # 使用していないimportの禁止
 - first_where # filter+firstはfirst(where: )を使う方が好ましい
 - last_where # 上記同様、last(where: )を使う方が好ましいので
 - contains_over_first_not_nil # first != nil はcontainでチェックする
@@ -27,6 +26,12 @@ opt_in_rules:
 - private_action # カプセル化を促進
 - private_outlet # UIコンポーネントへの不必要なアクセスを防ぐ
 - shorthand_optional_binding # 短縮系を使用してコードの簡潔化
+
+# 特定のコードの問題やスタイルの問題を検出するためのルール
+# swiftlint analyzeコマンドによってのみ実行され、通常のビルドプロセスでは適用されない
+analyzer_rules:
+  - unused_import # 未使用のimportを検出
+  - unused_declaration # 未使用の宣言を検出
 
 # 1行の文字列制限
 line_length:
